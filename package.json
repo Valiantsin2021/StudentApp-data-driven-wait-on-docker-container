@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pretest": "docker run -p 8085:8080 --rm --name student-postman -d tejasn1/student-app",
+    "pretest": "docker run -p 8085:8080 --name student-postman -d tejasn1/student-app",
     "test": "wait-on http-get://localhost:8085 && newman run ./Newman_App-students.postman_collection.json -d ./MOCK_DATA.csv --reporters \"cli,htmlextra\" --reporter-htmlextra-export ./newman/index.html",
     "posttest": "docker kill student-postman"
   },

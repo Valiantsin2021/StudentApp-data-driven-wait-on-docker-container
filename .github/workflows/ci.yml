@@ -1,4 +1,4 @@
-name: Student App API tests run newman from docker container
+name: Student_App_API_tests_run_newman_from_docker_container
 
 on: 
   push:
